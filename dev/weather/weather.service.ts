@@ -20,7 +20,7 @@ export class WeatherService {
     }
     searchWeather(citynam : string) : Observable<any> {
        return this._http.get(this.apiUrl+citynam+'&APIKEY=f32ab130bf3a1525d5364bc8396ba944&units=metric')
-            .map(data => data.json())
+            .map(respone => respone.json())
             .catch(error => {                
                 console.error(error);
                 return Observable.throw(error.json().error);
