@@ -8,22 +8,22 @@ import {WeatherService} from './weather.service';
     selector: 'weather-list',
     template: `
     <section class="weather-list">
-        <weather-item *ngFor= "#weatheritem of weatheritems" [item]=weatheritem > </weather-item>
-    </section>    
+        <weather-item *ngFor= "let weatheritem of weatheritems" [item]=weatheritem > </weather-item>
+    </section>
                 `,
     directives: [WeatherItemComponent],
-    providers:[WeatherService],
+
 })
 export class WeatherListComponent implements OnInit{
     weatheritems : WeatherItem[];
-    
+
     constructor(private _weatherService : WeatherService){
-        
+
     }
      getWeatherItems(){
          this.weatheritems = this._weatherService.getWeatherItems();
      }
-    
+
     ngOnInit():any{
         this.getWeatherItems();
     }
