@@ -23,6 +23,9 @@
   "files": [
     "./dev/app.component.ts",
     "./dev/boot.ts",
+    "./dev/profile.service.ts",
+    "./dev/profile.ts",
+    "./dev/sidebar.component.ts",
     "./dev/weather/weather-item.component.ts",
     "./dev/weather/weather-item.ts",
     "./dev/weather/weather-list.component.ts",
